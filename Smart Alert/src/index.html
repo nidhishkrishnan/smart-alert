@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="SmartBankApp">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Page title set in pageTitle directive -->
+	<title>Smart Alert</title>
+
+	<!-- Google Open Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+	<link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+</head>
+
+<body>
+<!-- Main view  -->
+
+<div ui-view="site-content"></div>
+
+<!-- For debugging the state
+<hr>
+    <pre>
+      &lt;!&ndash; Here's some values to keep an eye on in the sample in order to understand $state and $stateParams &ndash;&gt;
+      $state = {{$state.current.name}}       $stateParams = {{$stateParams}}       $state full url = {{ $state.$current.url.source }}
+      &lt;!&ndash; $state.$current is not a public api, we are using it to
+           display the full url for learning purposes&ndash;&gt;
+    </pre>-->
+
+<!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+<script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+<script src="https://cdn.rawgit.com/imalhasaranga/Html5_Video_Audio_Recorder/master/whammy.js"></script>
+<script src="https://cdn.rawgit.com/imalhasaranga/Html5_Video_Audio_Recorder/master/recorder.js"></script>
+<script src="https://cdn.rawgit.com/imalhasaranga/Html5_Video_Audio_Recorder/master/VIRecorder.js"></script>
+
+<script src="http://apis.google.com/js/client.js"></script>
+<script src="http://apis.google.com/js/api.js"></script>
+<script src="https://kandy-portal.s3.amazonaws.com/public/javascript/fcs/3.0.4/fcs.js"></script>
+<script src="src/common/plugins/kandy.js"></script>
+<script src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+</body>
+</html>

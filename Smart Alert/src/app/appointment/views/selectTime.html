@@ -1,0 +1,92 @@
+<div class="animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div id="content" class="col-lg-12 col-sm-15">
+                                    <div class="row">
+                                        <div class="box col-md-12">
+                                            <div class="box-inner">
+                                                <div class="box-content row" ui-view>
+                                                    <div class="col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-md-2">
+                                                                <div style="font-size: 50px">
+                                                                    <img class="calender-img" src="assets/img/appointmentCal.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <h2 style="margin-top: 12px; margin-bottom: 0px;  color: #6b5e51;">When would you like to meet?</h2>
+                                                                <h4 style="color: #857363;">First, select a date.</h4>
+                                                            </div>
+                                                        </div>
+                                                        <h3 style="color: #857363;padding-left: 8px;">When would you like to meet with us about?</h3>
+                                                        </h2>
+                                                        <div class="row">
+                                                            <div class="box col-md-7">
+                                                                <datetimepicker data-ng-model="appointmentTime.date" data-datetimepicker-config="{ startView:'day', minView:'day' }" before-render="beforeRender($view, $dates, $leftDate, $upDate, $rightDate)" data-on-set-time="onDateSelect(newDate, oldDate)" />
+                                                            </div>
+                                                            <div ng-show="timeLoader" class="box col-md-6" style="width: 40%;height: 100%; !important;padding-left: 16px; padding-right: 16px;">
+                                                                <div class="ibox col-sm-12 float-e-margins datetimepicker1 table-responsive" style="margin-left: -10px; margin-right: -10px;float: left; width: 106%;">
+                                                                    <div class="ibox-content gray-bg" style="padding-bottom: 26px;">
+                                                                        <div class="row">
+                                                                            <br/>
+                                                                            <div class="spiner-example">
+                                                                                <div class="text-center m-t-md">
+                                                                                    <h3>Loading Time Please Wait....</h3></div>
+                                                                                <div class="sk-spinner sk-spinner-wave">
+                                                                                    <div class="sk-rect1"></div>
+                                                                                    <div class="sk-rect2"></div>
+                                                                                    <div class="sk-rect3"></div>
+                                                                                    <div class="sk-rect4"></div>
+                                                                                    <div class="sk-rect5"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br/>
+                                                                            <br/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div ng-show="!timeLoader" class="box col-md-6" style="width: 40%;height: 100%;  !important;padding-left: 15px;">
+                                                                <div class="ibox float-e-margins datetimepicker1 table-responsive" style="margin-left: -9px; margin-right: -10px;float: left;">
+                                                                    <div class="ibox-content">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4 b-r" style="text-align: center;">
+                                                                                <h3 class="m-t-none m-b"><b>Morning</b></h3>
+                                                                                <div class="m-t-none m-b sm-time noselect" ng-class="{'selected':appointmentTime.time.timeValue === time.timeValue, 'timeDisabled' : time.selected===1}" ng-click="selectedTime(time)" ng-repeat="time in appointmentTimes|limitTo:6">{{time.timeValue}}
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-8">
+                                                                                <h3 class="m-t-none m-b"><center><b>Afternoon</b></center></h3>
+                                                                                <div class="col-md-12" style="text-align: center;padding-left: 12px !important;padding-right: 13px !important;">
+                                                                                    <div class="row">
+                                                                                        <div style="width: 46%; margin-bottom: 15px;" class="col-sm-5 sm-time noselect" ng-class="{'selected':appointmentTime.time.timeValue === time.timeValue, 'timeDisabled' : time.selected===1, 'leftSpace': $index%2 !==0}" ng-click="selectedTime(time)" ng-repeat="time in appointmentTimes|limitInBetween:6:17">{{time.timeValue}}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button href ng-click="selectAppointmentTopics()" class="btn btn-default">Previous</button>
+                    <button ng-disabled="finish==false" ng-click="addAppointment()" class="btn btn-primary">Finish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

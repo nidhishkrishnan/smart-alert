@@ -1,0 +1,57 @@
+<div class="gray-bg">
+    <div>
+
+        <h2 class="logo-name text-center">SmartBank</h2>
+
+    </div>
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+
+            <h3>Register to SmartBank</h3>
+            <p>Create account to see it in action.</p>
+            <form class="m-t" role="form" action="index.html">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name" required="">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Last Name" required="">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address" required="">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Phone Number" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password" required="">
+                </div>
+
+                <div class="checkbox">
+                    <label> <input type="checkbox" value=""> Agree the terms and policy</label>
+                </div>
+<!--
+                <div class="form-group">
+                        <div class="checkbox i-checks"><input type="checkbox"> <label>Agree the terms and policy</label></div>
+                </div>
+-->
+                <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
+
+                <p class="text-muted text-center"><small>Already have an account?</small></p>
+                <a class="btn btn-sm btn-white btn-block" ui-sref="account.login">Login</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green'
+            });
+        });
+    </script>
+</div>

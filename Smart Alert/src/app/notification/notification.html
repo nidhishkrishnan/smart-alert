@@ -1,0 +1,92 @@
+<style type="text/css">
+.tag {
+    display: inline-block;
+    position: relative;
+    background-color: #bababa;
+}
+
+.tag:focus {
+    background-color: #bababa;
+}
+
+.tag:hover {
+    border-color: transparent transparent transparent #1ab394 !important;
+}
+
+.current> .tag:after {
+    border-color: transparent transparent transparent #1ab394;
+}
+
+.current:hover {
+    border-color: transparent transparent transparent #1ab394 !important;
+}
+
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default.focus:active,
+.btn-default.active.focus,
+.open {
+    background-color: #bababa;
+    border-color: #bababa;
+    color: #ffffff;
+}
+
+.tag:after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent transparent transparent #bababa;
+    border-image: none;
+    border-style: solid;
+    border-width: 17px;
+    content: "";
+    display: inline-block;
+    height: 1.5px;
+    position: absolute;
+    right: -34px;
+    top: 0;
+    width: 0;
+}
+</style>
+<div class="row wrapper border-bottom white-bg page-heading animated fadeInRight">
+    <div class="col-lg-10">
+        <h2>Notifications</h2>
+        <ol class="breadcrumb">
+            <li>
+                Notifications
+            </li>
+            <li class="active">
+                <strong>Notifications</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+               <!--  <div class="spiner-example" ng-show="appointmentMainLoader">
+                    <div class="text-center m-t-md">
+                        <h3>Loading Please Wait....</h3></div>
+                    <div class="sk-spinner sk-spinner-wave">
+                        <div class="sk-rect1"></div>
+                        <div class="sk-rect2"></div>
+                        <div class="sk-rect3"></div>
+                        <div class="sk-rect4"></div>
+                        <div class="sk-rect5"></div>
+                    </div>
+                </div> -->
+                <div class="my-wizard ibox-content wizard" ng-show="!appointmentMainLoader">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
