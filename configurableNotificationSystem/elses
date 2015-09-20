@@ -1,0 +1,28 @@
+//	private boolean registerSubscriberForNotification(NotificationCondition condition,int subscriberId){
+//		if(subscriberId<=0||condition==null){return false;}
+//		Subscriber subscriber = subscriberMap.get(subscriberId);
+//		if(subscriber==null){return false;}
+//		long prdId = condition.getProductId();
+//		if(productMap.containsKey(prdId)){
+//			Product product = productMap.get(prdId);
+//			if(!product.getNotifySubscriberMap().containsKey(condition.getAttributName())){
+//				product.getNotifySubscriberMap().put(condition.getAttributName(),new HashMap<Integer, Product.UserCondition>());
+//			}
+//			Map<Integer, Product.UserCondition> map1 = product.getNotifySubscriberMap().get(condition.getAttributName());
+//			map1.put(subscriber.getSubscriberId(), new UserCondition(subscriber, condition.getCondition()));
+//			subscriberMap.get(subscriber.getSubscriberId()).getConditions().add(condition);
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	public void startNotify(){
+//		new NotificationUtils().doNotify();
+//	}
+//	
+//	public ArrayList<String> getNoti(int id){
+//		Subscriber subscriber = subscriberMap.get(id);
+//		ArrayList<String> list = new ArrayList<String>(subscriber.getNotifications());
+//		return subscriber!=null?list:null;
+//	}
+	
